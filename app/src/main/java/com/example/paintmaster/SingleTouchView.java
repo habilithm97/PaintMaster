@@ -71,7 +71,7 @@ public class SingleTouchView extends View {
         return true;
     }
 
-    public void setColor(String newColor) {
+    public void setColor(String newColor) { // MainActivity에서 클릭한 색상 값을 받아와서 Paint(붓) 객체에 설정함
         invalidate();
         paintColor = Color.parseColor(newColor);
         paint.setColor(paintColor);
