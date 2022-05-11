@@ -1,18 +1,179 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainActivity">
+    android:orientation="vertical">
 
-    <TextView
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:orientation="horizontal" >
+
+        <Button
+            android:id="@+id/newBtn"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="8dp"
+            android:layout_weight="1"
+            android:text="새 그림"
+            android:textStyle="bold"
+            android:textSize="20sp"
+            android:background="@drawable/rounded" />
+
+        <Button
+            android:id="@+id/saveBtn"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="8dp"
+            android:layout_weight="1"
+            android:text="저장하기"
+            android:textStyle="bold"
+            android:textSize="20sp"
+            android:background="@drawable/rounded"/>
+
+    </LinearLayout>
+
+    <com.example.paintmaster.SingleTouchView
+        android:id="@+id/singleTouchView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+
+        android:layout_marginBottom="3dp"
+        android:layout_marginTop="3dp"
+        android:layout_weight="1"
+        android:background="#ffffffff" />
+
+    <LinearLayout
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Hello World!"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        android:orientation="vertical">
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+        <LinearLayout
+            android:id="@+id/paintColor"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal" >
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="2dp"
+                android:background="#ffff0000"
+                android:onClick="colorClick"
+                android:layout_weight="1"
+                android:tag="#ffff0000" />
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="2dp"
+                android:background="#ffb400"
+                android:onClick="colorClick"
+                android:layout_weight="1"
+                android:tag="#ffb400" />
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="2dp"
+                android:background="#fff56e"
+                android:onClick="colorClick"
+                android:layout_weight="1"
+                android:tag="#fff56e" />
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="2dp"
+                android:background="#80e12a"
+                android:onClick="colorClick"
+                android:layout_weight="1"
+                android:tag="#80e12a" />
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="2dp"
+                android:background="#ff0000ff"
+                android:onClick="colorClick"
+                android:layout_weight="1"
+                android:tag="#ff0000ff" />
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="2dp"
+                android:background="#ff000000"
+                android:onClick="colorClick"
+                android:layout_weight="1"
+                android:tag="#ff000000" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/paintColor2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal" >
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="2dp"
+                android:background="#46ffff"
+                android:onClick="colorClick2"
+                android:layout_weight="1"
+                android:tag="#46ffff" />
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="2dp"
+                android:background="#7b68bb"
+                android:onClick="colorClick2"
+                android:layout_weight="1"
+                android:tag="#7b68bb" />
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="2dp"
+                android:background="#ff82ff"
+                android:onClick="colorClick2"
+                android:layout_weight="1"
+                android:tag="#ff82ff" />
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="2dp"
+                android:background="#8b4513"
+                android:onClick="colorClick2"
+                android:layout_weight="1"
+                android:tag="#8b4513" />
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="2dp"
+                android:background="#828282"
+                android:onClick="colorClick2"
+                android:layout_weight="1"
+                android:tag="#828282" />
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="2dp"
+                android:background="#ffffffff"
+                android:onClick="colorClick2"
+                android:layout_weight="1"
+                android:tag="#ffffffff"
+                android:text="지우개"
+                android:textStyle="bold"
+                android:textSize="17sp"/>
+
+        </LinearLayout>
+    </LinearLayout>
+</LinearLayout>
