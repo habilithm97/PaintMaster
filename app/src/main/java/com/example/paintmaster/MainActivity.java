@@ -1,8 +1,13 @@
 package com.example.paintmaster;
 
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.os.Bundle;
+import android.view.Menu;
+import android.view.MenuInflater;
+import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
 import android.widget.LinearLayout;
@@ -52,5 +57,30 @@ public class MainActivity extends AppCompatActivity {
             singleTouchView.setColor(color2);
             curPaint2 = (Button) view;
         }
+    }
+
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+        MenuInflater inflater = getMenuInflater();
+        inflater.inflate(R.menu.event_list, menu);
+        return true;
+    }
+
+    @Override
+    public boolean onOptionsItemSelected(@NonNull MenuItem item) {
+        switch (item.getItemId()) {
+            case R.id.pen1: // 얇은 펜
+                singleTouchView.paint.setStrokeWidth(4f);
+                break;
+
+            case R.id.pen2: // 중간 펜
+                singleTouchView.paint.setStrokeWidth(10f);
+                break;
+
+            case R.id.pen3: // 굵은 펜
+                singleTouchView.paint.setStrokeWidth(22f);
+                break;
+        }
+        return super.onOptionsItemSelected(item);
     }
 }
