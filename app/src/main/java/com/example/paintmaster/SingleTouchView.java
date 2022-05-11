@@ -76,4 +76,9 @@ public class SingleTouchView extends View {
         paintColor = Color.parseColor(newColor);
         paint.setColor(paintColor);
     }
+
+    public void setNew() { // MainActivity의 newBtn(새 그림 버튼) 클릭 시 비트앱을 지움(완전 초기화 불가능, 투명색으로 덮씌우기)
+        bitmap.eraseColor(Color.TRANSPARENT);
+        invalidate();
+    }
 }
