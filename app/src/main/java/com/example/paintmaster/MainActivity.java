@@ -80,6 +80,10 @@ public class MainActivity extends AppCompatActivity {
             case R.id.pen3: // 굵은 펜
                 singleTouchView.paint.setStrokeWidth(22f);
                 break;
+
+            case R.id.showIntent: // 테스트 화면으로 전환하기 메뉴
+                Intent intent = new Intent(getApplicationContext(), PaintTestActivity.class);
+                startActivity(intent);
         }
         return super.onOptionsItemSelected(item);
     }
