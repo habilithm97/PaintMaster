@@ -11,7 +11,8 @@ public class PaintTestActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_paint_test);
 
-        CustomView view = new CustomView(this); // 5. MainActivity에 CustomView 클래스 추가
+        //CustomView view = new CustomView(this); // 5. MainActivity에 CustomView 클래스 추가
+        CustomViewStyle view = new CustomViewStyle(this);
         setContentView(view);
     }
 }

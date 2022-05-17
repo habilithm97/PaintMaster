@@ -18,7 +18,13 @@ import androidx.annotation.Nullable;
  -3. onDraw() 내에 그리는 메서드를 호출함
  -4. onTouchEvent() 내에 터치 이벤트를 처리하는 코드를 넣음
  -5. 새로 만든 뷰를 MainActivity에 추가함
- */
+
+*그래픽을 그릴 때 필요한 클래스와 메서드
+ -Canvas : 뷰의 표면에 직접 그릴 수 있도록 만들어 주는 객체, 그래픽 그리기를 위한 메서드가 정의되어 있음(도화지)
+ -Paint : 그래픽 그리기를 위해 필요한 속성을 담고 있음(붓)
+ -Bitmap : 픽셀로 구성된 이미지로 메모리에 그래픽을 그릴 수 있음
+ -Drawable : 그래픽 요소가 객체로 정의되어 있음
+*/
 
 public class CustomView extends View { // 1. View 상속
 
