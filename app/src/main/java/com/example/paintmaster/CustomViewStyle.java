@@ -58,7 +58,7 @@ public class CustomViewStyle extends View {
         paint.setColor(Color.BLUE);
         canvas.drawRect(120, 10, 210, 100, paint);
 
-        paint = new Paint();
+        paint = new Paint(); // 원을 그리는 paint 객체
 
         // 첫 번째 원
         paint.setColor(Color.MAGENTA);
@@ -78,6 +78,6 @@ public class CustomViewStyle extends View {
         // 두 번째 텍스트
         paint.setStyle(Paint.Style.FILL);
         paint.setTextSize(30);
-        canvas.drawText("Test", 20, 320, paint);
+        canvas.drawText("Text", 20, 320, paint);
     }
 }

@@ -24,6 +24,8 @@ import androidx.annotation.Nullable;
  -Paint : 그래픽 그리기를 위해 필요한 속성을 담고 있음(붓)
  -Bitmap : 픽셀로 구성된 이미지로 메모리에 그래픽을 그릴 수 있음
  -Drawable : 그래픽 요소가 객체로 정의되어 있음
+
+-Clipping : 그리기 연산이 일어나는 영역을 설정하는 것으로써 clipRect() 또는 clipRegion()을 이용하면 클리핑 영역 설정 가능함
 */
 
 public class CustomView extends View { // 1. View 상속
